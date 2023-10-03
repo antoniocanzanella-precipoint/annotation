@@ -1,0 +1,240 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <AssemblyName>Http.Annotation.Tests</AssemblyName>
+        <RootNamespace>PreciPoint.Ims.Clients.Http.Annotation.Tests</RootNamespace>
+        <Authors>Antonio Canzanella</Authors>
+        <Company>PreciPoint GmbH</Company>
+        <Copyright>PreciPoint Gmbh 2020</Copyright>
+        <Description>Test client for annotation interaction.</Description>
+        <GenerateDocumentationFile>false</GenerateDocumentationFile>
+        <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+        <IsPackable>false</IsPackable>
+        <PackageProjectUrl>https://precipointea.ad.precipoint.de/PreciCloud/Annotation</PackageProjectUrl>
+        <RepositoryType>git</RepositoryType>
+        <RepositoryUrl>https://precipointea.ad.precipoint.de/PreciCloud/Annotation</RepositoryUrl>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="BenchmarkDotNet" Version="0.13.5"/>
+        <PackageReference Include="Bogus" Version="34.0.2"/>
+        <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.2.0"/>
+        <PackageReference Include="NetTopologySuite" Version="2.5.0"/>
+        <PackageReference Include="NUnit" Version="3.13.3"/>
+        <PackageReference Include="NUnit3TestAdapter" Version="4.4.2"/>
+        <PackageReference Include="PreciPoint.Ims.Clients.Http.ImageManagement" Version="2.1.1"/>
+        <PackageReference Include="PreciPoint.Ims.Clients.Http.WholeSlideImages" Version="2.1.2"/>
+        <PackageReference Include="PreciPoint.Ims.Core.HealthCheck" Version="1.0.0"/>
+        <PackageReference Include="FluentAssertions" Version="6.10.0"/>
+        <PackageReference Include="PreciPoint.Ims.Utils.TestUtils.Config" Version="2.0.0"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\..\..\Services\Annotation\Annotation.Domain\Annotation.Domain.csproj"/>
+        <ProjectReference Include="..\Http.Annotation\Http.Annotation.csproj"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <None Update="appsettings.json">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </None>
+        <None Update="appsettings.docker.json">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </None>
+    </ItemGroup>
+
+    <ItemGroup>
+        <None Update="files\convallaria.vpa">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </None>
+        <None Update="files\Empty.vpa">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </None>
+        <None Update="files\MergedWithRectangular.vpa">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </None>
+        <None Update="files\MgSr_30d_20_10_CD11c.vpa">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </None>
+        <None Update="files\MustThrowException.vpa">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </None>
+        <None Update="files\WithOutRectangular.vpa">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </None>
+        <None Update="files\MSC85_A.vpa">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </None>
+        <None Update="files\Benchmark\58740589-d449-4a92-bab9-76da922d034f\MSC109_A.vpa">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </None>
+        <None Update="files\Benchmark\58740589-d449-4a92-bab9-76da922d034f\MSC109_B.vpa">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </None>
+        <None Update="files\Benchmark\58740589-d449-4a92-bab9-76da922d034f\MSC109_C.vpa">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </None>
+        <None Update="files\Benchmark\58740589-d449-4a92-bab9-76da922d034f\MSC109_D.vpa">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </None>
+        <None Update="files\Benchmark\58740589-d449-4a92-bab9-76da922d034f\MSC109_E.vpa">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </None>
+        <None Update="files\Benchmark\58740589-d449-4a92-bab9-76da922d034f\MSC109_F.vpa">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </None>
+        <None Update="files\Benchmark\58740589-d449-4a92-bab9-76da922d034f\MSC109_G.vpa">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </None>
+        <None Update="files\Benchmark\58740589-d449-4a92-bab9-76da922d034f\MSC109_H.vpa">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </None>
+        <None Update="files\Benchmark\8f3b7231-4d19-4fd2-bf21-49de2699d1f2\MSC110_A.vpa">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </None>
+        <None Update="files\Benchmark\8f3b7231-4d19-4fd2-bf21-49de2699d1f2\MSC110_C.vpa">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </None>
+        <None Update="files\Benchmark\8f3b7231-4d19-4fd2-bf21-49de2699d1f2\MSC110_D.vpa">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </None>
+        <None Update="files\Benchmark\8f3b7231-4d19-4fd2-bf21-49de2699d1f2\MSC110_F.vpa">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </None>
+        <None Update="files\Benchmark\8f3b7231-4d19-4fd2-bf21-49de2699d1f2\MSC110_G.vpa">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </None>
+        <None Update="files\Benchmark\8f3b7231-4d19-4fd2-bf21-49de2699d1f2\MSC110_H.vpa">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </None>
+        <None Update="files\Benchmark\81dbce2a-d132-4226-ac6c-2c6f62e038fa\MSC111_A.vpa">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </None>
+        <None Update="files\Benchmark\81dbce2a-d132-4226-ac6c-2c6f62e038fa\MSC111_C.vpa">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </None>
+        <None Update="files\Benchmark\81dbce2a-d132-4226-ac6c-2c6f62e038fa\MSC111_D.vpa">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </None>
+        <None Update="files\Benchmark\81dbce2a-d132-4226-ac6c-2c6f62e038fa\MSC111_F.vpa">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </None>
+        <None Update="files\Benchmark\81dbce2a-d132-4226-ac6c-2c6f62e038fa\MSC111_G.vpa">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </None>
+        <None Update="files\Benchmark\81dbce2a-d132-4226-ac6c-2c6f62e038fa\MSC111_H.vpa">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </None>
+        <None Update="files\Benchmark\eb60ac27-7c8f-49fb-85de-e32f136172b7\MSC85_A.vpa">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </None>
+        <None Update="files\Benchmark\eb60ac27-7c8f-49fb-85de-e32f136172b7\MSC85_B.vpa">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </None>
+        <None Update="files\Benchmark\eb60ac27-7c8f-49fb-85de-e32f136172b7\MSC85_C.vpa">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </None>
+        <None Update="files\Benchmark\eb60ac27-7c8f-49fb-85de-e32f136172b7\MSC85_D.vpa">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </None>
+        <None Update="files\Benchmark\eb60ac27-7c8f-49fb-85de-e32f136172b7\MSC85_E.vpa">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </None>
+        <None Update="files\Benchmark\eb60ac27-7c8f-49fb-85de-e32f136172b7\MSC85_F.vpa">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </None>
+        <None Update="files\Benchmark\eb60ac27-7c8f-49fb-85de-e32f136172b7\MSC85_G.vpa">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </None>
+        <None Update="files\Benchmark\eb60ac27-7c8f-49fb-85de-e32f136172b7\MSC85_H.vpa">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </None>
+        <None Update="files\Benchmark\6d2a9098-ceb8-4d0a-94d0-1206c15737d9\MSC86_A.vpa">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </None>
+        <None Update="files\Benchmark\6d2a9098-ceb8-4d0a-94d0-1206c15737d9\MSC86_B.vpa">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </None>
+        <None Update="files\Benchmark\6d2a9098-ceb8-4d0a-94d0-1206c15737d9\MSC86_C.vpa">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </None>
+        <None Update="files\Benchmark\6d2a9098-ceb8-4d0a-94d0-1206c15737d9\MSC86_E.vpa">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </None>
+        <None Update="files\Benchmark\6d2a9098-ceb8-4d0a-94d0-1206c15737d9\MSC86_F.vpa">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </None>
+        <None Update="files\Benchmark\6d2a9098-ceb8-4d0a-94d0-1206c15737d9\MSC86_G.vpa">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </None>
+        <None Update="files\Benchmark\6d2a9098-ceb8-4d0a-94d0-1206c15737d9\MSC86_H.vpa">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </None>
+        <None Update="files\Benchmark\d04b069d-46ad-42e3-8089-59829cc9dbf4\MSC87_A.vpa">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </None>
+        <None Update="files\Benchmark\d04b069d-46ad-42e3-8089-59829cc9dbf4\MSC87_B.vpa">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </None>
+        <None Update="files\Benchmark\d04b069d-46ad-42e3-8089-59829cc9dbf4\MSC87_C.vpa">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </None>
+        <None Update="files\Benchmark\d04b069d-46ad-42e3-8089-59829cc9dbf4\MSC87_E.vpa">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </None>
+        <None Update="files\Benchmark\d04b069d-46ad-42e3-8089-59829cc9dbf4\MSC87_F.vpa">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </None>
+        <None Update="files\Benchmark\d04b069d-46ad-42e3-8089-59829cc9dbf4\MSC87_G.vpa">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </None>
+        <None Update="files\Benchmark\f56c73bd-be98-41f9-94b5-9ba1f4e098e1\MgSr_30d_20_10_CD11c.vpa">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </None>
+        <None Update="files\Benchmark\f56c73bd-be98-41f9-94b5-9ba1f4e098e1\MSC85_A.vpa">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </None>
+        <None Update="files\Benchmark\f56c73bd-be98-41f9-94b5-9ba1f4e098e1\MSC85_B.vpa">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </None>
+        <None Update="files\Benchmark\f56c73bd-be98-41f9-94b5-9ba1f4e098e1\MSC85_C.vpa">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </None>
+        <None Update="files\Benchmark\f56c73bd-be98-41f9-94b5-9ba1f4e098e1\MSC85_D.vpa">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </None>
+        <None Update="files\Benchmark\f56c73bd-be98-41f9-94b5-9ba1f4e098e1\MSC85_E.vpa">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </None>
+        <None Update="files\Benchmark\f56c73bd-be98-41f9-94b5-9ba1f4e098e1\MSC85_F.vpa">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </None>
+        <None Update="files\Benchmark\f56c73bd-be98-41f9-94b5-9ba1f4e098e1\MSC85_G.vpa">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </None>
+        <None Update="files\Benchmark\f56c73bd-be98-41f9-94b5-9ba1f4e098e1\MSC85_H.vpa">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </None>
+        <None Update="files\Benchmark\f56c73bd-be98-41f9-94b5-9ba1f4e098e1\MSC87_A.vpa">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </None>
+        <None Update="files\Benchmark\f56c73bd-be98-41f9-94b5-9ba1f4e098e1\MSC87_B.vpa">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </None>
+    </ItemGroup>
+
+    <!--**START** READ the last comment-->
+    <Target Name="CopyEnvironmentJsonFiles" AfterTargets="Build">
+        <ItemGroup>
+            <PackageReferenceFiles Condition="%(PackageReference.CopyToOutputDirectory) != ''" Include="$(NugetPackageRoot)/$([MSBuild]::Escape('%(PackageReference.Identity)').ToLower())/%(PackageReference.Version)/%(PackageReference.CopyToOutputDirectory)/*.json"/>
+        </ItemGroup>
+        <Copy SourceFiles="@(PackageReferenceFiles)" DestinationFolder="$(OutDir)"/>
+    </Target>
+    <!--
+      NOTE that "$([MSBuild]::Escape('%(PackageReference.Identity)').ToLower())" is necessary if dotnet build is done under Linux.
+      Evaluate the possibility to use multistage build in docker (Build into Windows image for linux then copy into linux image final image)
+      **END**
+      -->
+
+</Project>

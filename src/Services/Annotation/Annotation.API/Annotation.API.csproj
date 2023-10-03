@@ -1,0 +1,68 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <AssemblyName>PreciPoint.Ims.Services.Annotation.API</AssemblyName>
+        <RootNamespace>PreciPoint.Ims.Services.Annotation.API</RootNamespace>
+        <Authors>Antonio Canzanella</Authors>
+        <Company>PreciPoint GmbH</Company>
+        <Description>The API is managing all the logic related to annotation service</Description>
+        <Copyright>PreciPoint Gmbh 2020</Copyright>
+        <PackageProjectUrl>https://precipointea.ad.precipoint.de/PreciCloud/Annotation</PackageProjectUrl>
+        <RepositoryUrl>https://precipointea.ad.precipoint.de/PreciCloud/Annotation</RepositoryUrl>
+        <RepositoryType>git</RepositoryType>
+        <GenerateDocumentationFile>true</GenerateDocumentationFile>
+        <Version>0.0.1</Version>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="MessagePack.AspNetCoreMvcFormatter" Version="2.4.35"/>
+        <PackageReference Include="Microsoft.Extensions.Diagnostics.HealthChecks.EntityFrameworkCore" Version="6.0.13"/>
+        <PackageReference Include="NewRelic.LogEnrichers.Serilog" Version="1.1.0"/>
+        <PackageReference Include="Serilog.AspNetCore" Version="6.1.0"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="PreciPoint.Ims.Core.Authorization" Version="1.1.1"/>
+        <PackageReference Include="PreciPoint.Ims.Core.DataTransferObjects" Version="2.1.0">
+            <CopyToOutputDirectory>lib\netstandard2.0</CopyToOutputDirectory>
+        </PackageReference>
+        <PackageReference Include="PreciPoint.Ims.Core.HealthCheck" Version="1.0.0"/>
+        <PackageReference Include="PreciPoint.Ims.Core.JwtBearer.Keycloak" Version="1.1.1"/>
+        <PackageReference Include="PreciPoint.Ims.Core.Middlewares" Version="2.2.0"/>
+        <PackageReference Include="PreciPoint.Ims.Core.OpenApi" Version="1.0.3"/>
+        <PackageReference Include="PreciPoint.Ims.Services.Annotation.MessagePack" Version="0.2.1"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\Annotation.Database\Annotation.Database.csproj"/>
+        <ProjectReference Include="..\Annotation.Infrastructure\Annotation.Infrastructure.csproj"/>
+        <ProjectReference Include="..\Annotation.MessagePack\Annotation.MessagePack.csproj"/>
+    </ItemGroup>
+
+    <Target Name="CopyDtoXmlsBuild" AfterTargets="Build">
+        <ItemGroup>
+            <PackageReferenceFiles Condition="%(PackageReference.CopyToOutputDirectory) != ''" Include="$(NugetPackageRoot)\%(PackageReference.Identity)\%(PackageReference.Version)\%(PackageReference.CopyToOutputDirectory)\*.xml"/>
+
+        </ItemGroup>
+        <Copy SourceFiles="@(PackageReferenceFiles)" DestinationFolder="$(OutDir)"/>
+    </Target>
+
+    <Target Name="CopyDtoXmlsPublish" BeforeTargets="PrepareForPublish">
+        <ItemGroup>
+            <PackageReferenceFiles Condition="%(PackageReference.CopyToOutputDirectory) != ''" Include="$(NugetPackageRoot)\%(PackageReference.Identity)\%(PackageReference.Version)\%(PackageReference.CopyToOutputDirectory)\*.xml"/>
+        </ItemGroup>
+        <Copy SourceFiles="@(PackageReferenceFiles)" DestinationFolder="$(PublishDir)"/>
+    </Target>
+
+    <Target Name="CopyReferenceFiles" BeforeTargets="Build">
+        <ItemGroup>
+            <ReferenceFiles Include="%(Reference.RelativeDir)%(Reference.Filename).xml"/>
+        </ItemGroup>
+
+        <Message Text="Copying reference files to $(OutputPath)" Importance="High"/>
+        <Copy SourceFiles="@(ReferenceFiles)" DestinationFolder="$(OutputPath)" Condition="Exists('%(RootDir)%(Directory)%(Filename)%(Extension)')"/>
+    </Target>
+
+
+</Project>

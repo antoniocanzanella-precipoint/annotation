@@ -1,0 +1,37 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <AssemblyName>Annotation.Database.Tests</AssemblyName>
+        <RootNamespace>PreciPoint.Ims.Services.Annotation.Database.Tests</RootNamespace>
+        <Authors>Antonio Canzanella</Authors>
+        <Company>PreciPoint GmbH</Company>
+        <Copyright>PreciPoint Gmbh 2020</Copyright>
+        <Description>Test client for annotation database.</Description>
+        <GenerateDocumentationFile>false</GenerateDocumentationFile>
+        <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+        <IsPackable>false</IsPackable>
+        <RepositoryUrl>https://precipointea.ad.precipoint.de/PreciCloud/Annotation</RepositoryUrl>
+        <PackageProjectUrl>https://precipointea.ad.precipoint.de/PreciCloud/Annotation</PackageProjectUrl>
+        <RepositoryType>git</RepositoryType>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="BenchmarkDotNet" Version="0.13.5"/>
+        <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.2.0"/>
+        <PackageReference Include="NUnit" Version="3.13.3"/>
+        <PackageReference Include="NUnit3TestAdapter" Version="4.4.2"/>
+        <PackageReference Include="PreciPoint.Ims.Utils.TestUtils.Config" Version="2.0.0"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\Annotation.Database\Annotation.Database.csproj"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <None Update="appsettings.json">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </None>
+    </ItemGroup>
+
+</Project>

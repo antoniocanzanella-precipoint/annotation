@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <AssemblyName>PreciPoint.Ims.Services.Annotation.MessagePack</AssemblyName>
+        <RootNamespace>PreciPoint.Ims.Services.Annotation.MessagePack</RootNamespace>
+        <Authors>Sebastian Kunz</Authors>
+        <Company>PreciPoint GmbH</Company>
+        <Copyright>PreciPoint Gmbh 2022</Copyright>
+        <Description>Contains additional MessagePack classes</Description>
+        <PackageProjectUrl>https://precipointea.ad.precipoint.de/PreciCloud/Annotation</PackageProjectUrl>
+        <RepositoryUrl>https://precipointea.ad.precipoint.de/PreciCloud/Annotation</RepositoryUrl>
+        <RepositoryType>git</RepositoryType>
+        <GenerateDocumentationFile>true</GenerateDocumentationFile>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <Version>0.2.1</Version>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="PreciPoint.Ims.Services.Annotation.DataTransferObjects" Version="1.0.0"/>
+        <PackageReference Include="MessagePack" Version="2.4.35"/>
+    </ItemGroup>
+
+</Project>

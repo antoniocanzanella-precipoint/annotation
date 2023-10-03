@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <AssemblyName>PreciPoint.Ims.Services.Annotation.Domain</AssemblyName>
+        <RootNamespace>PreciPoint.Ims.Services.Annotation.Domain</RootNamespace>
+        <Authors>Antonio Canzanella</Authors>
+        <Company>PreciPoint GmbH</Company>
+        <Description>The Domain with all entity and domain logic</Description>
+        <Copyright>PreciPoint Gmbh 2020</Copyright>
+        <PackageProjectUrl>https://precipointea.ad.precipoint.de/PreciCloud/Annotation</PackageProjectUrl>
+        <RepositoryUrl>https://precipointea.ad.precipoint.de/PreciCloud/Annotation</RepositoryUrl>
+        <RepositoryType>git</RepositoryType>
+        <GenerateDocumentationFile>false</GenerateDocumentationFile>
+        <Version>0.0.1</Version>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="PreciPoint.Ims.Services.Annotation.Enums" Version="1.0.0"/>
+        <PackageReference Include="NetTopologySuite" Version="2.5.0"/>
+    </ItemGroup>
+
+</Project>

@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <AssemblyName>Annotation.Application.Tests</AssemblyName>
+        <RootNamespace>PreciPoint.Ims.Services.Annotation.Application.Tests</RootNamespace>
+        <Authors>Sebastian Kunz</Authors>
+        <Company>PreciPoint GmbH</Company>
+        <Description>Tests for the Application core logic.</Description>
+        <Copyright>PreciPoint Gmbh 2021</Copyright>
+        <PackageProjectUrl>https://precipointea.ad.precipoint.de/PreciCloud/Annotation</PackageProjectUrl>
+        <RepositoryUrl>https://precipointea.ad.precipoint.de/PreciCloud/Annotation</RepositoryUrl>
+        <RepositoryType>git</RepositoryType>
+        <GenerateDocumentationFile>false</GenerateDocumentationFile>
+        <Version>0.0.1</Version>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="BenchmarkDotNet" Version="0.13.5"/>
+        <PackageReference Include="FluentAssertions" Version="6.10.0"/>
+        <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.5.0"/>
+        <PackageReference Include="NUnit" Version="3.13.3"/>
+        <PackageReference Include="NUnit3TestAdapter" Version="4.4.2"/>
+        <PackageReference Include="PreciPoint.Ims.Utils.TestUtils.Config" Version="2.0.0"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\Annotation.Application\Annotation.Application.csproj"/>
+        <ProjectReference Include="..\Annotation.Database\Annotation.Database.csproj"/>
+    </ItemGroup>
+
+</Project>

@@ -1,0 +1,464 @@
+// Validating benchmarks:
+// ***** BenchmarkRunner: Start   *****
+// ***** Found 4 benchmark(s) in total *****
+// ***** Building 1 exe(s) in Parallel: Start   *****
+// start dotnet restore  /p:UseSharedCompilation=false /p:BuildInParallel=false /m:1 /p:Deterministic=true /p:Optimize=true in C:\PreciPoint\Annotation\src\Clients\SignalR\SignalR.Annotation.Tests\bin\Release\netcoreapp3.1\264c86ee-1749-4f77-83ed-39e787718a64
+// command took 2.38s and exited with 0
+// start dotnet build -c Release  --no-restore /p:UseSharedCompilation=false /p:BuildInParallel=false /m:1 /p:Deterministic=true /p:Optimize=true in C:\PreciPoint\Annotation\src\Clients\SignalR\SignalR.Annotation.Tests\bin\Release\netcoreapp3.1\264c86ee-1749-4f77-83ed-39e787718a64
+// command took 12.96s and exited with 1
+// start dotnet build -c Release  --no-restore --no-dependencies /p:UseSharedCompilation=false /p:BuildInParallel=false /m:1 /p:Deterministic=true /p:Optimize=true in C:\PreciPoint\Annotation\src\Clients\SignalR\SignalR.Annotation.Tests\bin\Release\netcoreapp3.1\264c86ee-1749-4f77-83ed-39e787718a64
+// command took 3.62s and exited with 0
+// ***** Done, took 00:00:18 (18.99 sec)   *****
+// Found 4 benchmarks:
+//   JobPolygonGetAnnotations.ReadSlideAnnotationPolygon_100Point: Job-ULSDTJ(RunStrategy=Throughput)
+//   JobPolygonGetAnnotations.ReadSlideAnnotationPolygon_1000Point: Job-ULSDTJ(RunStrategy=Throughput)
+//   JobPolygonGetAnnotations.ReadSlideAnnotationPolygon_5000Point: Job-ULSDTJ(RunStrategy=Throughput)
+//   JobPolygonGetAnnotations.ReadSlideAnnotationPolygon_10000Point: Job-ULSDTJ(RunStrategy=Throughput)
+
+// **************************
+// Benchmark: JobPolygonGetAnnotations.ReadSlideAnnotationPolygon_100Point: Job-ULSDTJ(RunStrategy=Throughput)
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet "264c86ee-1749-4f77-83ed-39e787718a64.dll" --benchmarkName "PreciPoint.Ims.Clients.SignalR.Annotation.Tests.Benchmark.JobPolygonGetAnnotations.ReadSlideAnnotationPolygon_100Point" --job "RunStrategy=Throughput" --benchmarkId 0 in C:\PreciPoint\Annotation\src\Clients\SignalR\SignalR.Annotation.Tests\bin\Release\netcoreapp3.1\264c86ee-1749-4f77-83ed-39e787718a64\bin\Release\netcoreapp3.1
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET Core 3.1.15 (CoreCLR 4.700.21.21202, CoreFX 4.700.21.21402), X64 RyuJIT
+// GC=Concurrent Workstation
+// Job: Job-CLLWWF(RunStrategy=Throughput)
+
+OverheadJitting  1: 1 op, 448300.00 ns, 448.3000 us/op
+WorkloadJitting  1: 1 op, 67264500.00 ns, 67.2645 ms/op
+
+WorkloadPilot    1: 2 op, 36741000.00 ns, 18.3705 ms/op
+WorkloadPilot    2: 3 op, 45217700.00 ns, 15.0726 ms/op
+WorkloadPilot    3: 4 op, 67201400.00 ns, 16.8004 ms/op
+WorkloadPilot    4: 5 op, 82855700.00 ns, 16.5711 ms/op
+WorkloadPilot    5: 6 op, 99331900.00 ns, 16.5553 ms/op
+WorkloadPilot    6: 7 op, 107633300.00 ns, 15.3762 ms/op
+WorkloadPilot    7: 8 op, 119565300.00 ns, 14.9457 ms/op
+WorkloadPilot    8: 9 op, 155763400.00 ns, 17.3070 ms/op
+WorkloadPilot    9: 10 op, 184662700.00 ns, 18.4663 ms/op
+WorkloadPilot   10: 11 op, 160774200.00 ns, 14.6158 ms/op
+WorkloadPilot   11: 12 op, 159636100.00 ns, 13.3030 ms/op
+WorkloadPilot   12: 13 op, 184819100.00 ns, 14.2169 ms/op
+WorkloadPilot   13: 14 op, 194535800.00 ns, 13.8954 ms/op
+WorkloadPilot   14: 15 op, 212824900.00 ns, 14.1883 ms/op
+WorkloadPilot   15: 16 op, 230651000.00 ns, 14.4157 ms/op
+WorkloadPilot   16: 32 op, 443250500.00 ns, 13.8516 ms/op
+WorkloadPilot   17: 64 op, 942980000.00 ns, 14.7341 ms/op
+
+WorkloadWarmup   1: 64 op, 905318800.00 ns, 14.1456 ms/op
+WorkloadWarmup   2: 64 op, 882645000.00 ns, 13.7913 ms/op
+WorkloadWarmup   3: 64 op, 953243100.00 ns, 14.8944 ms/op
+WorkloadWarmup   4: 64 op, 903880400.00 ns, 14.1231 ms/op
+WorkloadWarmup   5: 64 op, 902621400.00 ns, 14.1035 ms/op
+WorkloadWarmup   6: 64 op, 909609100.00 ns, 14.2126 ms/op
+WorkloadWarmup   7: 64 op, 926039900.00 ns, 14.4694 ms/op
+WorkloadWarmup   8: 64 op, 913689800.00 ns, 14.2764 ms/op
+
+// BeforeActualRun
+WorkloadActual   1: 64 op, 868057300.00 ns, 13.5634 ms/op
+WorkloadActual   2: 64 op, 898582400.00 ns, 14.0404 ms/op
+WorkloadActual   3: 64 op, 919466700.00 ns, 14.3667 ms/op
+WorkloadActual   4: 64 op, 940643400.00 ns, 14.6976 ms/op
+WorkloadActual   5: 64 op, 911607900.00 ns, 14.2439 ms/op
+WorkloadActual   6: 64 op, 921078800.00 ns, 14.3919 ms/op
+WorkloadActual   7: 64 op, 913092000.00 ns, 14.2671 ms/op
+WorkloadActual   8: 64 op, 910365100.00 ns, 14.2245 ms/op
+WorkloadActual   9: 64 op, 922608000.00 ns, 14.4157 ms/op
+WorkloadActual  10: 64 op, 919093900.00 ns, 14.3608 ms/op
+WorkloadActual  11: 64 op, 989767600.00 ns, 15.4651 ms/op
+WorkloadActual  12: 64 op, 950394700.00 ns, 14.8499 ms/op
+WorkloadActual  13: 64 op, 886387600.00 ns, 13.8498 ms/op
+WorkloadActual  14: 64 op, 890007400.00 ns, 13.9064 ms/op
+WorkloadActual  15: 64 op, 1011420700.00 ns, 15.8034 ms/op
+WorkloadActual  16: 64 op, 1093915900.00 ns, 17.0924 ms/op
+WorkloadActual  17: 64 op, 1168930600.00 ns, 18.2645 ms/op
+WorkloadActual  18: 64 op, 1110202500.00 ns, 17.3469 ms/op
+WorkloadActual  19: 64 op, 967832700.00 ns, 15.1224 ms/op
+WorkloadActual  20: 64 op, 911897100.00 ns, 14.2484 ms/op
+WorkloadActual  21: 64 op, 909642800.00 ns, 14.2132 ms/op
+WorkloadActual  22: 64 op, 884200200.00 ns, 13.8156 ms/op
+WorkloadActual  23: 64 op, 887846300.00 ns, 13.8726 ms/op
+WorkloadActual  24: 64 op, 934116900.00 ns, 14.5956 ms/op
+WorkloadActual  25: 64 op, 857630000.00 ns, 13.4005 ms/op
+WorkloadActual  26: 64 op, 874396400.00 ns, 13.6624 ms/op
+WorkloadActual  27: 64 op, 857546600.00 ns, 13.3992 ms/op
+WorkloadActual  28: 64 op, 914940500.00 ns, 14.2959 ms/op
+WorkloadActual  29: 64 op, 903533700.00 ns, 14.1177 ms/op
+WorkloadActual  30: 64 op, 928557300.00 ns, 14.5087 ms/op
+WorkloadActual  31: 64 op, 935054700.00 ns, 14.6102 ms/op
+WorkloadActual  32: 64 op, 951942200.00 ns, 14.8741 ms/op
+WorkloadActual  33: 64 op, 898597000.00 ns, 14.0406 ms/op
+WorkloadActual  34: 64 op, 887897200.00 ns, 13.8734 ms/op
+WorkloadActual  35: 64 op, 956353600.00 ns, 14.9430 ms/op
+WorkloadActual  36: 64 op, 936174000.00 ns, 14.6277 ms/op
+WorkloadActual  37: 64 op, 916433900.00 ns, 14.3193 ms/op
+WorkloadActual  38: 64 op, 915647600.00 ns, 14.3070 ms/op
+WorkloadActual  39: 64 op, 887636800.00 ns, 13.8693 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 64 op, 868057300.00 ns, 13.5634 ms/op
+WorkloadResult   2: 64 op, 898582400.00 ns, 14.0404 ms/op
+WorkloadResult   3: 64 op, 919466700.00 ns, 14.3667 ms/op
+WorkloadResult   4: 64 op, 940643400.00 ns, 14.6976 ms/op
+WorkloadResult   5: 64 op, 911607900.00 ns, 14.2439 ms/op
+WorkloadResult   6: 64 op, 921078800.00 ns, 14.3919 ms/op
+WorkloadResult   7: 64 op, 913092000.00 ns, 14.2671 ms/op
+WorkloadResult   8: 64 op, 910365100.00 ns, 14.2245 ms/op
+WorkloadResult   9: 64 op, 922608000.00 ns, 14.4157 ms/op
+WorkloadResult  10: 64 op, 919093900.00 ns, 14.3608 ms/op
+WorkloadResult  11: 64 op, 989767600.00 ns, 15.4651 ms/op
+WorkloadResult  12: 64 op, 950394700.00 ns, 14.8499 ms/op
+WorkloadResult  13: 64 op, 886387600.00 ns, 13.8498 ms/op
+WorkloadResult  14: 64 op, 890007400.00 ns, 13.9064 ms/op
+WorkloadResult  15: 64 op, 967832700.00 ns, 15.1224 ms/op
+WorkloadResult  16: 64 op, 911897100.00 ns, 14.2484 ms/op
+WorkloadResult  17: 64 op, 909642800.00 ns, 14.2132 ms/op
+WorkloadResult  18: 64 op, 884200200.00 ns, 13.8156 ms/op
+WorkloadResult  19: 64 op, 887846300.00 ns, 13.8726 ms/op
+WorkloadResult  20: 64 op, 934116900.00 ns, 14.5956 ms/op
+WorkloadResult  21: 64 op, 857630000.00 ns, 13.4005 ms/op
+WorkloadResult  22: 64 op, 874396400.00 ns, 13.6624 ms/op
+WorkloadResult  23: 64 op, 857546600.00 ns, 13.3992 ms/op
+WorkloadResult  24: 64 op, 914940500.00 ns, 14.2959 ms/op
+WorkloadResult  25: 64 op, 903533700.00 ns, 14.1177 ms/op
+WorkloadResult  26: 64 op, 928557300.00 ns, 14.5087 ms/op
+WorkloadResult  27: 64 op, 935054700.00 ns, 14.6102 ms/op
+WorkloadResult  28: 64 op, 951942200.00 ns, 14.8741 ms/op
+WorkloadResult  29: 64 op, 898597000.00 ns, 14.0406 ms/op
+WorkloadResult  30: 64 op, 887897200.00 ns, 13.8734 ms/op
+WorkloadResult  31: 64 op, 956353600.00 ns, 14.9430 ms/op
+WorkloadResult  32: 64 op, 936174000.00 ns, 14.6277 ms/op
+WorkloadResult  33: 64 op, 916433900.00 ns, 14.3193 ms/op
+WorkloadResult  34: 64 op, 915647600.00 ns, 14.3070 ms/op
+WorkloadResult  35: 64 op, 887636800.00 ns, 13.8693 ms/op
+
+// AfterAll
+// Benchmark Process 15404 has exited with code 0
+
+Mean = 14.267 ms, StdErr = 0.079 ms (0.56%), N = 35, StdDev = 0.469 ms
+Min = 13.399 ms, Q1 = 13.890 ms, Median = 14.267 ms, Q3 = 14.552 ms, Max = 15.465 ms
+IQR = 0.662 ms, LowerFence = 12.896 ms, UpperFence = 15.546 ms
+ConfidenceInterval = [13.982 ms; 14.553 ms] (CI 99.9%), Margin = 0.285 ms (2.00% of Mean)
+Skewness = 0.28, Kurtosis = 2.85, MValue = 2
+
+// **************************
+// Benchmark: JobPolygonGetAnnotations.ReadSlideAnnotationPolygon_1000Point: Job-ULSDTJ(RunStrategy=Throughput)
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet "264c86ee-1749-4f77-83ed-39e787718a64.dll" --benchmarkName "PreciPoint.Ims.Clients.SignalR.Annotation.Tests.Benchmark.JobPolygonGetAnnotations.ReadSlideAnnotationPolygon_1000Point" --job "RunStrategy=Throughput" --benchmarkId 1 in C:\PreciPoint\Annotation\src\Clients\SignalR\SignalR.Annotation.Tests\bin\Release\netcoreapp3.1\264c86ee-1749-4f77-83ed-39e787718a64\bin\Release\netcoreapp3.1
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET Core 3.1.15 (CoreCLR 4.700.21.21202, CoreFX 4.700.21.21402), X64 RyuJIT
+// GC=Concurrent Workstation
+// Job: Job-RQPEXZ(RunStrategy=Throughput)
+
+OverheadJitting  1: 1 op, 376600.00 ns, 376.6000 us/op
+WorkloadJitting  1: 1 op, 234902500.00 ns, 234.9025 ms/op
+
+WorkloadPilot    1: 2 op, 385688500.00 ns, 192.8442 ms/op
+WorkloadPilot    2: 3 op, 544101800.00 ns, 181.3673 ms/op
+
+WorkloadWarmup   1: 3 op, 549200400.00 ns, 183.0668 ms/op
+WorkloadWarmup   2: 3 op, 598199300.00 ns, 199.3998 ms/op
+WorkloadWarmup   3: 3 op, 563308100.00 ns, 187.7694 ms/op
+WorkloadWarmup   4: 3 op, 569822500.00 ns, 189.9408 ms/op
+WorkloadWarmup   5: 3 op, 526505000.00 ns, 175.5017 ms/op
+WorkloadWarmup   6: 3 op, 534149900.00 ns, 178.0500 ms/op
+
+// BeforeActualRun
+WorkloadActual   1: 3 op, 578870900.00 ns, 192.9570 ms/op
+WorkloadActual   2: 3 op, 532080300.00 ns, 177.3601 ms/op
+WorkloadActual   3: 3 op, 537410100.00 ns, 179.1367 ms/op
+WorkloadActual   4: 3 op, 534127100.00 ns, 178.0424 ms/op
+WorkloadActual   5: 3 op, 535959100.00 ns, 178.6530 ms/op
+WorkloadActual   6: 3 op, 534733700.00 ns, 178.2446 ms/op
+WorkloadActual   7: 3 op, 548547000.00 ns, 182.8490 ms/op
+WorkloadActual   8: 3 op, 544361900.00 ns, 181.4540 ms/op
+WorkloadActual   9: 3 op, 524734900.00 ns, 174.9116 ms/op
+WorkloadActual  10: 3 op, 533857900.00 ns, 177.9526 ms/op
+WorkloadActual  11: 3 op, 535252600.00 ns, 178.4175 ms/op
+WorkloadActual  12: 3 op, 533115200.00 ns, 177.7051 ms/op
+WorkloadActual  13: 3 op, 543186700.00 ns, 181.0622 ms/op
+WorkloadActual  14: 3 op, 531706100.00 ns, 177.2354 ms/op
+WorkloadActual  15: 3 op, 522652300.00 ns, 174.2174 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 3 op, 532080300.00 ns, 177.3601 ms/op
+WorkloadResult   2: 3 op, 537410100.00 ns, 179.1367 ms/op
+WorkloadResult   3: 3 op, 534127100.00 ns, 178.0424 ms/op
+WorkloadResult   4: 3 op, 535959100.00 ns, 178.6530 ms/op
+WorkloadResult   5: 3 op, 534733700.00 ns, 178.2446 ms/op
+WorkloadResult   6: 3 op, 548547000.00 ns, 182.8490 ms/op
+WorkloadResult   7: 3 op, 544361900.00 ns, 181.4540 ms/op
+WorkloadResult   8: 3 op, 524734900.00 ns, 174.9116 ms/op
+WorkloadResult   9: 3 op, 533857900.00 ns, 177.9526 ms/op
+WorkloadResult  10: 3 op, 535252600.00 ns, 178.4175 ms/op
+WorkloadResult  11: 3 op, 533115200.00 ns, 177.7051 ms/op
+WorkloadResult  12: 3 op, 543186700.00 ns, 181.0622 ms/op
+WorkloadResult  13: 3 op, 531706100.00 ns, 177.2354 ms/op
+WorkloadResult  14: 3 op, 522652300.00 ns, 174.2174 ms/op
+
+// AfterAll
+// Benchmark Process 8528 has exited with code 0
+
+Mean = 178.374 ms, StdErr = 0.619 ms (0.35%), N = 14, StdDev = 2.316 ms
+Min = 174.217 ms, Q1 = 177.446 ms, Median = 178.143 ms, Q3 = 179.016 ms, Max = 182.849 ms
+IQR = 1.569 ms, LowerFence = 175.092 ms, UpperFence = 181.370 ms
+ConfidenceInterval = [175.762 ms; 180.987 ms] (CI 99.9%), Margin = 2.613 ms (1.46% of Mean)
+Skewness = 0.13, Kurtosis = 2.45, MValue = 2
+
+// **************************
+// Benchmark: JobPolygonGetAnnotations.ReadSlideAnnotationPolygon_5000Point: Job-ULSDTJ(RunStrategy=Throughput)
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet "264c86ee-1749-4f77-83ed-39e787718a64.dll" --benchmarkName "PreciPoint.Ims.Clients.SignalR.Annotation.Tests.Benchmark.JobPolygonGetAnnotations.ReadSlideAnnotationPolygon_5000Point" --job "RunStrategy=Throughput" --benchmarkId 2 in C:\PreciPoint\Annotation\src\Clients\SignalR\SignalR.Annotation.Tests\bin\Release\netcoreapp3.1\264c86ee-1749-4f77-83ed-39e787718a64\bin\Release\netcoreapp3.1
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET Core 3.1.15 (CoreCLR 4.700.21.21202, CoreFX 4.700.21.21402), X64 RyuJIT
+// GC=Concurrent Workstation
+// Job: Job-QZSGXX(RunStrategy=Throughput)
+
+OverheadJitting  1: 1 op, 350100.00 ns, 350.1000 us/op
+WorkloadJitting  1: 1 op, 3123847800.00 ns, 3.1238 s/op
+
+WorkloadWarmup   1: 1 op, 2698200300.00 ns, 2.6982 s/op
+WorkloadWarmup   2: 1 op, 2663495000.00 ns, 2.6635 s/op
+WorkloadWarmup   3: 1 op, 2653106100.00 ns, 2.6531 s/op
+WorkloadWarmup   4: 1 op, 2678627400.00 ns, 2.6786 s/op
+WorkloadWarmup   5: 1 op, 2880127800.00 ns, 2.8801 s/op
+WorkloadWarmup   6: 1 op, 2820137700.00 ns, 2.8201 s/op
+WorkloadWarmup   7: 1 op, 2788297500.00 ns, 2.7883 s/op
+WorkloadWarmup   8: 1 op, 2688214400.00 ns, 2.6882 s/op
+WorkloadWarmup   9: 1 op, 2633033500.00 ns, 2.6330 s/op
+WorkloadWarmup  10: 1 op, 2638076500.00 ns, 2.6381 s/op
+WorkloadWarmup  11: 1 op, 2690577500.00 ns, 2.6906 s/op
+WorkloadWarmup  12: 1 op, 2622349100.00 ns, 2.6223 s/op
+
+// BeforeActualRun
+WorkloadActual   1: 1 op, 2618494000.00 ns, 2.6185 s/op
+WorkloadActual   2: 1 op, 2621069000.00 ns, 2.6211 s/op
+WorkloadActual   3: 1 op, 2681588200.00 ns, 2.6816 s/op
+WorkloadActual   4: 1 op, 2725349000.00 ns, 2.7253 s/op
+WorkloadActual   5: 1 op, 2872310100.00 ns, 2.8723 s/op
+WorkloadActual   6: 1 op, 2661958900.00 ns, 2.6620 s/op
+WorkloadActual   7: 1 op, 2667953800.00 ns, 2.6680 s/op
+WorkloadActual   8: 1 op, 2894697200.00 ns, 2.8947 s/op
+WorkloadActual   9: 1 op, 2742009600.00 ns, 2.7420 s/op
+WorkloadActual  10: 1 op, 2778151500.00 ns, 2.7782 s/op
+WorkloadActual  11: 1 op, 2666652000.00 ns, 2.6667 s/op
+WorkloadActual  12: 1 op, 2694360500.00 ns, 2.6944 s/op
+WorkloadActual  13: 1 op, 2735754900.00 ns, 2.7358 s/op
+WorkloadActual  14: 1 op, 2737727700.00 ns, 2.7377 s/op
+WorkloadActual  15: 1 op, 2696053700.00 ns, 2.6961 s/op
+WorkloadActual  16: 1 op, 2790738400.00 ns, 2.7907 s/op
+WorkloadActual  17: 1 op, 2685615900.00 ns, 2.6856 s/op
+WorkloadActual  18: 1 op, 2678933800.00 ns, 2.6789 s/op
+
+// AfterActualRun
+WorkloadResult   1: 1 op, 2618494000.00 ns, 2.6185 s/op
+WorkloadResult   2: 1 op, 2621069000.00 ns, 2.6211 s/op
+WorkloadResult   3: 1 op, 2681588200.00 ns, 2.6816 s/op
+WorkloadResult   4: 1 op, 2725349000.00 ns, 2.7253 s/op
+WorkloadResult   5: 1 op, 2661958900.00 ns, 2.6620 s/op
+WorkloadResult   6: 1 op, 2667953800.00 ns, 2.6680 s/op
+WorkloadResult   7: 1 op, 2742009600.00 ns, 2.7420 s/op
+WorkloadResult   8: 1 op, 2778151500.00 ns, 2.7782 s/op
+WorkloadResult   9: 1 op, 2666652000.00 ns, 2.6667 s/op
+WorkloadResult  10: 1 op, 2694360500.00 ns, 2.6944 s/op
+WorkloadResult  11: 1 op, 2735754900.00 ns, 2.7358 s/op
+WorkloadResult  12: 1 op, 2737727700.00 ns, 2.7377 s/op
+WorkloadResult  13: 1 op, 2696053700.00 ns, 2.6961 s/op
+WorkloadResult  14: 1 op, 2790738400.00 ns, 2.7907 s/op
+WorkloadResult  15: 1 op, 2685615900.00 ns, 2.6856 s/op
+WorkloadResult  16: 1 op, 2678933800.00 ns, 2.6789 s/op
+
+// AfterAll
+// Benchmark Process 34232 has exited with code 0
+
+Mean = 2.699 s, StdErr = 0.012 s (0.46%), N = 16, StdDev = 0.050 s
+Min = 2.618 s, Q1 = 2.668 s, Median = 2.690 s, Q3 = 2.736 s, Max = 2.791 s
+IQR = 0.069 s, LowerFence = 2.565 s, UpperFence = 2.839 s
+ConfidenceInterval = [2.648 s; 2.749 s] (CI 99.9%), Margin = 0.051 s (1.87% of Mean)
+Skewness = 0.18, Kurtosis = 2.08, MValue = 2
+
+// **************************
+// Benchmark: JobPolygonGetAnnotations.ReadSlideAnnotationPolygon_10000Point: Job-ULSDTJ(RunStrategy=Throughput)
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet "264c86ee-1749-4f77-83ed-39e787718a64.dll" --benchmarkName "PreciPoint.Ims.Clients.SignalR.Annotation.Tests.Benchmark.JobPolygonGetAnnotations.ReadSlideAnnotationPolygon_10000Point" --job "RunStrategy=Throughput" --benchmarkId 3 in C:\PreciPoint\Annotation\src\Clients\SignalR\SignalR.Annotation.Tests\bin\Release\netcoreapp3.1\264c86ee-1749-4f77-83ed-39e787718a64\bin\Release\netcoreapp3.1
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET Core 3.1.15 (CoreCLR 4.700.21.21202, CoreFX 4.700.21.21402), X64 RyuJIT
+// GC=Concurrent Workstation
+// Job: Job-ZHVPEV(RunStrategy=Throughput)
+
+OverheadJitting  1: 1 op, 367400.00 ns, 367.4000 us/op
+WorkloadJitting  1: 1 op, 10547721900.00 ns, 10.5477 s/op
+
+WorkloadWarmup   1: 1 op, 9910928500.00 ns, 9.9109 s/op
+WorkloadWarmup   2: 1 op, 9902443400.00 ns, 9.9024 s/op
+WorkloadWarmup   3: 1 op, 9855737400.00 ns, 9.8557 s/op
+WorkloadWarmup   4: 1 op, 9843760700.00 ns, 9.8438 s/op
+WorkloadWarmup   5: 1 op, 10108424300.00 ns, 10.1084 s/op
+WorkloadWarmup   6: 1 op, 10402336000.00 ns, 10.4023 s/op
+WorkloadWarmup   7: 1 op, 10297547900.00 ns, 10.2975 s/op
+WorkloadWarmup   8: 1 op, 10324557000.00 ns, 10.3246 s/op
+WorkloadWarmup   9: 1 op, 10463156200.00 ns, 10.4632 s/op
+WorkloadWarmup  10: 1 op, 11462218600.00 ns, 11.4622 s/op
+WorkloadWarmup  11: 1 op, 10358520600.00 ns, 10.3585 s/op
+
+// BeforeActualRun
+WorkloadActual   1: 1 op, 11492864500.00 ns, 11.4929 s/op
+WorkloadActual   2: 1 op, 10472650900.00 ns, 10.4727 s/op
+WorkloadActual   3: 1 op, 10254828300.00 ns, 10.2548 s/op
+WorkloadActual   4: 1 op, 10409410900.00 ns, 10.4094 s/op
+WorkloadActual   5: 1 op, 10049699300.00 ns, 10.0497 s/op
+WorkloadActual   6: 1 op, 11326124500.00 ns, 11.3261 s/op
+WorkloadActual   7: 1 op, 10771851700.00 ns, 10.7719 s/op
+WorkloadActual   8: 1 op, 10213443100.00 ns, 10.2134 s/op
+WorkloadActual   9: 1 op, 10735282500.00 ns, 10.7353 s/op
+WorkloadActual  10: 1 op, 10316511600.00 ns, 10.3165 s/op
+WorkloadActual  11: 1 op, 10091170000.00 ns, 10.0912 s/op
+WorkloadActual  12: 1 op, 9988999100.00 ns, 9.9890 s/op
+WorkloadActual  13: 1 op, 10351381400.00 ns, 10.3514 s/op
+WorkloadActual  14: 1 op, 10424111800.00 ns, 10.4241 s/op
+WorkloadActual  15: 1 op, 10157119400.00 ns, 10.1571 s/op
+WorkloadActual  16: 1 op, 10033413000.00 ns, 10.0334 s/op
+WorkloadActual  17: 1 op, 10160918500.00 ns, 10.1609 s/op
+WorkloadActual  18: 1 op, 10187439100.00 ns, 10.1874 s/op
+WorkloadActual  19: 1 op, 10112355700.00 ns, 10.1124 s/op
+WorkloadActual  20: 1 op, 10278922600.00 ns, 10.2789 s/op
+WorkloadActual  21: 1 op, 10146098100.00 ns, 10.1461 s/op
+
+// AfterActualRun
+WorkloadResult   1: 1 op, 10472650900.00 ns, 10.4727 s/op
+WorkloadResult   2: 1 op, 10254828300.00 ns, 10.2548 s/op
+WorkloadResult   3: 1 op, 10409410900.00 ns, 10.4094 s/op
+WorkloadResult   4: 1 op, 10049699300.00 ns, 10.0497 s/op
+WorkloadResult   5: 1 op, 10771851700.00 ns, 10.7719 s/op
+WorkloadResult   6: 1 op, 10213443100.00 ns, 10.2134 s/op
+WorkloadResult   7: 1 op, 10735282500.00 ns, 10.7353 s/op
+WorkloadResult   8: 1 op, 10316511600.00 ns, 10.3165 s/op
+WorkloadResult   9: 1 op, 10091170000.00 ns, 10.0912 s/op
+WorkloadResult  10: 1 op, 9988999100.00 ns, 9.9890 s/op
+WorkloadResult  11: 1 op, 10351381400.00 ns, 10.3514 s/op
+WorkloadResult  12: 1 op, 10424111800.00 ns, 10.4241 s/op
+WorkloadResult  13: 1 op, 10157119400.00 ns, 10.1571 s/op
+WorkloadResult  14: 1 op, 10033413000.00 ns, 10.0334 s/op
+WorkloadResult  15: 1 op, 10160918500.00 ns, 10.1609 s/op
+WorkloadResult  16: 1 op, 10187439100.00 ns, 10.1874 s/op
+WorkloadResult  17: 1 op, 10112355700.00 ns, 10.1124 s/op
+WorkloadResult  18: 1 op, 10278922600.00 ns, 10.2789 s/op
+WorkloadResult  19: 1 op, 10146098100.00 ns, 10.1461 s/op
+
+// AfterAll
+// Benchmark Process 21144 has exited with code 0
+
+Mean = 10.271 s, StdErr = 0.050 s (0.49%), N = 19, StdDev = 0.218 s
+Min = 9.989 s, Q1 = 10.129 s, Median = 10.213 s, Q3 = 10.380 s, Max = 10.772 s
+IQR = 0.251 s, LowerFence = 9.752 s, UpperFence = 10.757 s
+ConfidenceInterval = [10.076 s; 10.467 s] (CI 99.9%), Margin = 0.196 s (1.91% of Mean)
+Skewness = 0.91, Kurtosis = 2.96, MValue = 2
+
+// ***** BenchmarkRunner: Finish  *****
+
+// * Export *
+  BenchmarkDotNet.Artifacts\results\PreciPoint.Ims.Clients.SignalR.Annotation.Tests.Benchmark.JobPolygonGetAnnotations-report.csv
+  BenchmarkDotNet.Artifacts\results\PreciPoint.Ims.Clients.SignalR.Annotation.Tests.Benchmark.JobPolygonGetAnnotations-report-github.md
+  BenchmarkDotNet.Artifacts\results\PreciPoint.Ims.Clients.SignalR.Annotation.Tests.Benchmark.JobPolygonGetAnnotations-report.html
+
+// * Detailed results *
+JobPolygonGetAnnotations.ReadSlideAnnotationPolygon_100Point: Job-ULSDTJ(RunStrategy=Throughput)
+Runtime = .NET Core 3.1.15 (CoreCLR 4.700.21.21202, CoreFX 4.700.21.21402), X64 RyuJIT; GC = Concurrent Workstation
+Mean = 14.267 ms, StdErr = 0.079 ms (0.56%), N = 35, StdDev = 0.469 ms
+Min = 13.399 ms, Q1 = 13.890 ms, Median = 14.267 ms, Q3 = 14.552 ms, Max = 15.465 ms
+IQR = 0.662 ms, LowerFence = 12.896 ms, UpperFence = 15.546 ms
+ConfidenceInterval = [13.982 ms; 14.553 ms] (CI 99.9%), Margin = 0.285 ms (2.00% of Mean)
+Skewness = 0.28, Kurtosis = 2.85, MValue = 2
+-------------------- Histogram --------------------
+[13.211 ms ; 13.547 ms) | @@
+[13.547 ms ; 13.923 ms) | @@@@@@@@
+[13.923 ms ; 14.416 ms) | @@@@@@@@@@@@@@@
+[14.416 ms ; 14.957 ms) | @@@@@@@@
+[14.957 ms ; 15.482 ms) | @@
+---------------------------------------------------
+
+JobPolygonGetAnnotations.ReadSlideAnnotationPolygon_1000Point: Job-ULSDTJ(RunStrategy=Throughput)
+Runtime = .NET Core 3.1.15 (CoreCLR 4.700.21.21202, CoreFX 4.700.21.21402), X64 RyuJIT; GC = Concurrent Workstation
+Mean = 178.374 ms, StdErr = 0.619 ms (0.35%), N = 14, StdDev = 2.316 ms
+Min = 174.217 ms, Q1 = 177.446 ms, Median = 178.143 ms, Q3 = 179.016 ms, Max = 182.849 ms
+IQR = 1.569 ms, LowerFence = 175.092 ms, UpperFence = 181.370 ms
+ConfidenceInterval = [175.762 ms; 180.987 ms] (CI 99.9%), Margin = 2.613 ms (1.46% of Mean)
+Skewness = 0.13, Kurtosis = 2.45, MValue = 2
+-------------------- Histogram --------------------
+[172.956 ms ; 179.968 ms) | @@@@@@@@@@@
+[179.968 ms ; 183.775 ms) | @@@
+---------------------------------------------------
+
+JobPolygonGetAnnotations.ReadSlideAnnotationPolygon_5000Point: Job-ULSDTJ(RunStrategy=Throughput)
+Runtime = .NET Core 3.1.15 (CoreCLR 4.700.21.21202, CoreFX 4.700.21.21402), X64 RyuJIT; GC = Concurrent Workstation
+Mean = 2.699 s, StdErr = 0.012 s (0.46%), N = 16, StdDev = 0.050 s
+Min = 2.618 s, Q1 = 2.668 s, Median = 2.690 s, Q3 = 2.736 s, Max = 2.791 s
+IQR = 0.069 s, LowerFence = 2.565 s, UpperFence = 2.839 s
+ConfidenceInterval = [2.648 s; 2.749 s] (CI 99.9%), Margin = 0.051 s (1.87% of Mean)
+Skewness = 0.18, Kurtosis = 2.08, MValue = 2
+-------------------- Histogram --------------------
+[2.593 s ; 2.652 s) | @@
+[2.652 s ; 2.817 s) | @@@@@@@@@@@@@@
+---------------------------------------------------
+
+JobPolygonGetAnnotations.ReadSlideAnnotationPolygon_10000Point: Job-ULSDTJ(RunStrategy=Throughput)
+Runtime = .NET Core 3.1.15 (CoreCLR 4.700.21.21202, CoreFX 4.700.21.21402), X64 RyuJIT; GC = Concurrent Workstation
+Mean = 10.271 s, StdErr = 0.050 s (0.49%), N = 19, StdDev = 0.218 s
+Min = 9.989 s, Q1 = 10.129 s, Median = 10.213 s, Q3 = 10.380 s, Max = 10.772 s
+IQR = 0.251 s, LowerFence = 9.752 s, UpperFence = 10.757 s
+ConfidenceInterval = [10.076 s; 10.467 s] (CI 99.9%), Margin = 0.196 s (1.91% of Mean)
+Skewness = 0.91, Kurtosis = 2.96, MValue = 2
+-------------------- Histogram --------------------
+[ 9.882 s ; 10.230 s) | @@@@@@@@@@
+[10.230 s ; 10.646 s) | @@@@@@@
+[10.646 s ; 10.879 s) | @@
+---------------------------------------------------
+
+// * Summary *
+
+BenchmarkDotNet=v0.13.0, OS=Windows 10.0.19042.985 (20H2/October2020Update)
+Intel Core i7-7700HQ CPU 2.80GHz (Kaby Lake), 1 CPU, 8 logical and 4 physical cores
+.NET SDK=5.0.203
+  [Host]     : .NET Core 3.1.15 (CoreCLR 4.700.21.21202, CoreFX 4.700.21.21402), X64 RyuJIT
+  Job-ULSDTJ : .NET Core 3.1.15 (CoreCLR 4.700.21.21202, CoreFX 4.700.21.21402), X64 RyuJIT
+
+RunStrategy=Throughput  
+
+|                                Method |         Mean |      Error |     StdDev |
+|-------------------------------------- |-------------:|-----------:|-----------:|
+|   ReadSlideAnnotationPolygon_100Point |     14.27 ms |   0.285 ms |   0.469 ms |
+|  ReadSlideAnnotationPolygon_1000Point |    178.37 ms |   2.613 ms |   2.316 ms |
+|  ReadSlideAnnotationPolygon_5000Point |  2,698.90 ms |  50.519 ms |  49.617 ms |
+| ReadSlideAnnotationPolygon_10000Point | 10,271.35 ms | 195.734 ms | 217.558 ms |
+
+// * Hints *
+Outliers
+  JobPolygonGetAnnotations.ReadSlideAnnotationPolygon_100Point: RunStrategy=Throughput   -> 4 outliers were removed (15.80 ms..18.26 ms)
+  JobPolygonGetAnnotations.ReadSlideAnnotationPolygon_1000Point: RunStrategy=Throughput  -> 1 outlier  was  removed (192.96 ms)
+  JobPolygonGetAnnotations.ReadSlideAnnotationPolygon_5000Point: RunStrategy=Throughput  -> 2 outliers were removed (2.87 s, 2.89 s)
+  JobPolygonGetAnnotations.ReadSlideAnnotationPolygon_10000Point: RunStrategy=Throughput -> 2 outliers were removed (11.33 s, 11.49 s)
+
+// * Legends *
+  Mean   : Arithmetic mean of all measurements
+  Error  : Half of 99.9% confidence interval
+  StdDev : Standard deviation of all measurements
+  1 ms   : 1 Millisecond (0.001 sec)
+
+// ***** BenchmarkRunner: End *****
+// ** Remained 0 benchmark(s) to run **
+Run time: 00:08:20 (500.96 sec), executed benchmarks: 4
+
+Global total time: 00:08:39 (519.95 sec), executed benchmarks: 4
+// * Artifacts cleanup *

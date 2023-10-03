@@ -1,0 +1,1 @@
+wt.exe -p PowerShell -d "./Infrastructure/source"; -p PowerShell -d "./scripts/infrastructure/annota.api"; -p PowerShell -d "./tests_plan"; -p PowerShell -d "./Infrastructure/scripts"; -p PowerShell -d "./scripts/util"; -p PowerShell -d "."; -p PowerShell -d "./src/Services/Annotation/Annotation.Database"; focus-tab -t 0

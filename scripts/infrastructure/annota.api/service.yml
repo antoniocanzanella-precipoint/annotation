@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+
+  annota.api:
+    volumes:
+      - ../../ca-cert:/usr/local/share/ca-certificates:ro
+      - ./pfx:/mnt/cert:ro
+      - ./appsettings:/app/environment:ro
+    build:
+      context: ../../../..
+      dockerfile: src/Services/Annotation/Annotation.API/alpine.Dockerfile
+
+networks:
+  precicloud_backend:
+    name: precicloud_backend
+    external: true

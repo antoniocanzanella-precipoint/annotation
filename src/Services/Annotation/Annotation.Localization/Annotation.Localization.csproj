@@ -1,0 +1,29 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <AssemblyName>PreciPoint.Ims.Services.Annotation.Localization</AssemblyName>
+        <RootNamespace>PreciPoint.Ims.Services.Annotation.Localization</RootNamespace>
+        <Authors>Antonio Canzanella</Authors>
+        <Company>PreciPoint GmbH</Company>
+        <Copyright>PreciPoint Gmbh 2021</Copyright>
+        <Description>The localization resource project</Description>
+        <PackageProjectUrl>https://precipointea.ad.precipoint.de/PreciCloud/Annotation</PackageProjectUrl>
+        <RepositoryUrl>https://precipointea.ad.precipoint.de/PreciCloud/Annotation</RepositoryUrl>
+        <RepositoryType>git</RepositoryType>
+        <GenerateDocumentationFile>true</GenerateDocumentationFile>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <EmbeddedResource Update="Translations.resx">
+            <Generator>PublicResXFileCodeGenerator</Generator>
+            <LastGenOutput>Translations.Designer.cs</LastGenOutput>
+        </EmbeddedResource>
+        <EmbeddedResource Update="Translations.de.resx">
+            <Generator>PublicResXFileCodeGenerator</Generator>
+            <LastGenOutput>Translations.Designer.cs</LastGenOutput>
+        </EmbeddedResource>
+    </ItemGroup>
+
+</Project>

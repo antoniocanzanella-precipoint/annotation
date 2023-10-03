@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <AssemblyName>PreciPoint.Ims.Services.Annotation.DataTransferObjects</AssemblyName>
+        <RootNamespace>PreciPoint.Ims.Services.Annotation.DataTransferObjects</RootNamespace>
+        <Authors>Antonio Canzanella</Authors>
+        <Company>PreciPoint GmbH</Company>
+        <Copyright>PreciPoint Gmbh 2020</Copyright>
+        <Description>The DataTransferObjects contains dtos</Description>
+        <PackageProjectUrl>https://precipointea.ad.precipoint.de/PreciCloud/Annotation</PackageProjectUrl>
+        <RepositoryUrl>https://precipointea.ad.precipoint.de/PreciCloud/Annotation</RepositoryUrl>
+        <RepositoryType>git</RepositoryType>
+        <GenerateDocumentationFile>true</GenerateDocumentationFile>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <Version>1.0.0</Version>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="PreciPoint.Ims.Services.Annotation.Enums" Version="1.0.0"/>
+    </ItemGroup>
+
+</Project>

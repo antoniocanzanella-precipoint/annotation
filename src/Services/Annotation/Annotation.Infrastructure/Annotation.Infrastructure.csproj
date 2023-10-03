@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <AssemblyName>PreciPoint.Ims.Services.Annotation.Infrastructure</AssemblyName>
+        <RootNamespace>PreciPoint.Ims.Services.Annotation.Infrastructure</RootNamespace>
+        <Authors>Antonio Canzanella</Authors>
+        <Company>PreciPoint GmbH</Company>
+        <Copyright>PreciPoint Gmbh 2020</Copyright>
+        <Description>The core logic of annotation app</Description>
+        <PackageProjectUrl>https://precipointea.ad.precipoint.de/PreciCloud/Annotation</PackageProjectUrl>
+        <RepositoryUrl>https://precipointea.ad.precipoint.de/PreciCloud/Annotation</RepositoryUrl>
+        <RepositoryType>git</RepositoryType>
+        <GenerateDocumentationFile>false</GenerateDocumentationFile>
+        <Version>0.0.1</Version>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="PreciPoint.Ims.Clients.Http.ImageManagement" Version="2.1.1"/>
+        <PackageReference Include="PreciPoint.Ims.Messaging.Rabbit" Version="1.1.0"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\Annotation.Application\Annotation.Application.csproj"/>
+    </ItemGroup>
+
+</Project>

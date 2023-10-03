@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <AssemblyName>PreciPoint.Ims.Clients.Http.Annotation</AssemblyName>
+        <RootNamespace>PreciPoint.Ims.Clients.Http.Annotation</RootNamespace>
+        <Authors>Antonio Canzanella</Authors>
+        <Company>PreciPoint GmbH</Company>
+        <Copyright>PreciPoint Gmbh 2021</Copyright>
+        <Description>Implementation of HTTP client for annotation interaction.</Description>
+        <GenerateDocumentationFile>true</GenerateDocumentationFile>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <PackageProjectUrl>https://precipointea.ad.precipoint.de/PreciCloud/Annotation</PackageProjectUrl>
+        <RepositoryUrl>https://precipointea.ad.precipoint.de/PreciCloud/Annotation</RepositoryUrl>
+        <RepositoryType>git</RepositoryType>
+        <TargetFramework>net6.0</TargetFramework>
+        <Version>1.0.6</Version>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="MessagePack" Version="2.4.35"/>
+        <PackageReference Include="PreciPoint.Ims.Core.DataTransfer" Version="2.1.1"/>
+        <PackageReference Include="PreciPoint.Ims.Services.Annotation.DataTransferObjects" Version="1.0.0"/>
+        <PackageReference Include="PreciPoint.Ims.Services.Annotation.MessagePack" Version="0.2.1"/>
+    </ItemGroup>
+
+</Project>

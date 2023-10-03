@@ -1,0 +1,41 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <AssemblyName>PreciPoint.Ims.Services.Annotation.Application</AssemblyName>
+        <RootNamespace>PreciPoint.Ims.Services.Annotation.Application</RootNamespace>
+        <Authors>Antonio Canzanella</Authors>
+        <Company>PreciPoint GmbH</Company>
+        <Copyright>PreciPoint Gmbh 2020</Copyright>
+        <Description>The core logic of annotation app</Description>
+        <PackageProjectUrl>https://precipointea.ad.precipoint.de/PreciCloud/Annotation</PackageProjectUrl>
+        <RepositoryUrl>https://precipointea.ad.precipoint.de/PreciCloud/Annotation</RepositoryUrl>
+        <RepositoryType>git</RepositoryType>
+        <GenerateDocumentationFile>false</GenerateDocumentationFile>
+        <Version>0.0.1</Version>
+        <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="AutoMapper" Version="12.0.1"/>
+        <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.1"/>
+        <PackageReference Include="MediatR" Version="12.0.1"/>
+        <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.13"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="PreciPoint.Ims.Core.Validations" Version="1.0.0"/>
+        <PackageReference Include="PreciPoint.Ims.Core.FluentValidation" Version="1.2.0"/>
+        <PackageReference Include="PreciPoint.Ims.Core.Authorization" Version="1.1.1"/>
+        <PackageReference Include="PreciPoint.Ims.Core.Extensions" Version="1.1.0"/>
+        <PackageReference Include="PreciPoint.Ims.Messaging.Core" Version="1.0.0"/>
+        <PackageReference Include="PreciPoint.Ims.Services.Annotation.DataTransferObjects" Version="1.0.0"/>
+        <PackageReference Include="PreciPoint.Ims.Services.ImageManagement.DataTransferObjects" Version="2.1.0"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\Annotation.Domain\Annotation.Domain.csproj"/>
+        <ProjectReference Include="..\Annotation.Localization\Annotation.Localization.csproj"/>
+    </ItemGroup>
+
+</Project>
